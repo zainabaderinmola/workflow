@@ -1,0 +1,22 @@
+{%extends 'base.html' %}
+
+{% block content %}
+<div class = 'post'>
+    {% if post.goal_id %}
+    <hr>
+</div>
+{% endif %}
+
+<div class ='alert alert-secondary' role='alert'>
+<p> Goal Id of your Goal Name: <b>{{ post.goal_id }}</b> </p>
+</div>
+<div class ='alert alert-primary' role='alert'>
+<p> User : <b>{{post.user }}</b></p>
+<p> Goal Name: <b>{{ post.goal_name }}</b> </p>
+<p> Goal Status: <b>{{ post.goal_status.status_name }}</b> </p>
+</div>
+<hr>
+
+<a href = "/aifedayoscrumy/home/"><b>Go home</b> &#127968; 🚶‍♂️ 🚶‍♀️</a>
+
+{% endblock %}

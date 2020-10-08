@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+aifedayoscrumy/__init__.py
+aifedayoscrumy/admin.py
+aifedayoscrumy/apps.py
+aifedayoscrumy/models.py
+aifedayoscrumy/tests.py
+aifedayoscrumy/urls.py
+aifedayoscrumy/views.py
+aifedayoscrumy.egg-info/PKG-INFO
+aifedayoscrumy.egg-info/SOURCES.txt
+aifedayoscrumy.egg-info/dependency_links.txt
+aifedayoscrumy.egg-info/top_level.txt
+aifedayoscrumy/migrations/__init__.py

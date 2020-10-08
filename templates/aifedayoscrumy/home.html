@@ -1,0 +1,330 @@
+{% extends  'base.html' %}
+{% load user_extras %}
+
+{% block title %}Home Page {% endblock %}
+{% block content %}
+
+<div class='container'>
+<button class = 'btn' style = 'text-align:center'><h3>Scrumy Board</h3>
+{% if request.user|is_group:'Developer' %}  
+<div class ='alert alert-info' role='alert'>
+<h5><i class="fa fa-user"></i> Hi {{ user.username }}, Developer !</h5>
+</div> 
+
+    <style>
+        table, th, td {
+            padding : 10px;
+            border: 1px solid grey;    
+        }
+        
+        td a:hover {
+            color: red;
+        }
+        
+    </style>
+    <div class = 'table'>
+            <table style = 'width: 100%'>
+
+                <tr>
+                    <th>User</th>
+                    <th>Weekly Goals</th>
+                    <th>Daily Goals</th>
+                    <th>Verify Goals</th>
+                    <th>Done Goals</th>
+                   
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                        
+                    <td> {% for eachgoal in user.goal_created.all %}
+                         {% if eachgoal.goal_status.status_name == 'Weekly Goal' %}
+                        <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                    
+                    {% endif %}
+                    {% endfor %}
+                </td>
+
+                    <td> {% for eachgoal in user.goal_created.all %} 
+                        {% if eachgoal.goal_status.status_name == 'Daily goal' %}
+                        <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                    
+                    {% endif %}
+                    {% endfor %}
+                </td>
+
+
+                    <td> {% for eachgoal in user.goal_created.all %}
+                         {% if eachgoal.goal_status.status_name == 'Verify Goal' %}
+                        <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                    
+                    {% endif %}
+                    {% endfor %}
+                </td>
+
+
+                    <td> {% for eachgoal in user.goal_created.all %}
+                         {% if eachgoal.goal_status.status_name == 'Done Goal' %}
+                        <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                    
+                    {% endif %}
+                    {% endfor %}
+                </td>
+            
+            {% endfor %}
+            </tr>
+            
+            </table>
+        </div>
+<div class ='alert alert-secondary' role='alert'>
+<a href = '{% url "add_goal" %}'>Create a goal here</a> | <a href = '{% url "index" %}'>Sign up as a new user</a>
+</div>
+<div class ='alert alert-info' role='alert'>
+<a href = "{% url 'logout' %}">Logout</a>
+</div>
+
+{% elif request.user|is_group:'Admin' %}  
+<div class ='alert alert-info' role='alert'>
+<h5><i class="fa fa-user"></i> Hi {{ user.username }}, Admin !</h5>
+</div>
+<style>
+    table, th, td {
+        padding : 10px;
+        border: 1px solid grey;    
+    }
+    
+    td a:hover {
+        color: red;
+    }
+    
+</style>
+<div class = 'table'>
+        <table style = 'width: 100%'>
+
+            <tr>
+                <th>User</th>
+                <th>Weekly Goals</th>
+                <th>Daily Goals</th>
+                <th>Verify Goals</th>
+                <th>Done Goals</th>
+               
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                    
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Weekly Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+                <td> {% for eachgoal in user.goal_created.all %} 
+                    {% if eachgoal.goal_status.status_name == 'Daily goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Verify Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Done Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+        
+        {% endfor %}
+        </tr>
+        
+        </table>
+    </div>
+<div class ='alert alert-secondary' role='alert'>
+<a href = '{% url "add_goal" %}'>Create a goal here</a> | <a href = '{% url "index" %}'>Sign up as a new user</a>
+</div>
+<div class ='alert alert-info' role='alert'>
+<a href = "{% url 'logout' %}">Logout</a>
+</div>
+
+{% elif request.user|is_group:'Owner' %}  
+<div class ='alert alert-info' role='alert'>
+<h5><i class="fa fa-user"></i> Hi {{ user.username }},  Owner !</h5>
+</div>
+<style>
+    table, th, td {
+        padding : 10px;
+        border: 1px solid grey;    
+    }
+    
+    td a:hover {
+        color: red;
+    }
+    
+</style>
+<div class = 'table'>
+        <table style = 'width: 100%'>
+
+            <tr>
+                <th>User</th>
+                <th>Weekly Goals</th>
+                <th>Daily Goals</th>
+                <th>Verify Goals</th>
+                <th>Done Goals</th>
+               
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                    
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Weekly Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+                <td> {% for eachgoal in user.goal_created.all %} 
+                    {% if eachgoal.goal_status.status_name == 'Daily goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Verify Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Done Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+        
+        {% endfor %}
+        </tr>
+        
+        </table>
+    </div>
+<div class ='alert alert-secondary' role='alert'>
+<a href = '{% url "add_goal" %}'>Create a goal here</a> | <a href = '{% url "index" %}'>Sign up as a new user</a>
+</div>
+<div class ='alert alert-info' role='alert'>
+<a href = "{% url 'logout' %}">Logout</a>
+</div>
+
+{% elif request.user|is_group:'Quality Asssurance' %}  
+<div class ='alert alert-info' role='alert'>
+<h5><i class="fa fa-user"></i> Hi {{ user.username }}, Quality Assurance !</h5>
+</div>
+
+<style>
+    table, th, td {
+        padding : 10px;
+        border: 1px solid grey;    
+    }
+    
+    td a:hover {
+        color: red;
+    }
+    
+</style>
+<div class = 'table'>
+        <table style = 'width: 100%'>
+
+            <tr>
+                <th>User</th>
+                <th>Weekly Goals</th>
+                <th>Daily Goals</th>
+                <th>Verify Goals</th>
+                <th>Done Goals</th>
+               
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                    
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Weekly Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+                <td> {% for eachgoal in user.goal_created.all %} 
+                    {% if eachgoal.goal_status.status_name == 'Daily goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Verify Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }} : {{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+
+
+                <td> {% for eachgoal in user.goal_created.all %}
+                     {% if eachgoal.goal_status.status_name == 'Done Goal' %}
+                    <div><a href = "{% url 'move_goal' goal_id=eachgoal.goal_id %}">{{ eachgoal.goal_name }}:{{ eachgoal.goal_id }} <br> </a></div>
+                
+                {% endif %}
+                {% endfor %}
+            </td>
+        
+        {% endfor %}
+        </tr>
+        
+        </table>
+    </div>
+<div class ='alert alert-secondary' role='alert'>
+<a href = '{% url "add_goal" %}'>Create a goal here</a> | <a href = '{% url "index" %}'>Sign up as a new user</a>
+</div>
+<div class ='alert alert-info' role='alert'>
+<a href = "{% url 'logout' %}">Logout</a>
+</div>
+
+
+{% else %}
+<div class ='alert alert-secondary' role='alert'>
+<p>You are not logged in</p>
+<a href = "{% url 'login' %}">Login:</a>
+</div>
+<hr>
+<div class ='alert alert-success' role='alert'>
+<p>Sign up as a new user?</p>
+<a href = "{% url 'index' %}">Sign Up:</a>
+</div>
+</div>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    
+    User Error 😞
+
+{% endblock %}
+
+{% block content %}
+<div class ='alert alert-danger' role='alert'>
+    <h3><u> User Error</u> 😞</h3>
+    
+    <p> You account is not authorised to perform this action.</p>
+    <p>You cannot create the goal to the desired status.</p>
+    <p> Neither are you permitted to create a goal for the specified User.</p>
+    <p> Kindly review the <b>Terms and conditions</b> stipulated by <b>Linuxjobber.</b></p>
+    <hr>
+    <p> Thank you for your time</p>
+   
+    <p>Have a lovely day!!!</p>
+    
+    <h1 class ="wave">👋</h1>
+   </div>
+   <hr>
+
+   <div class ='alert alert-info' role='alert'>
+   <a href = "/aifedayoscrumy/home/"><b>Go Back</b> 🔙</a> | <a href = "{% url 'login' %}">Login Here: </a> 
+</div>
+{% endblock %}

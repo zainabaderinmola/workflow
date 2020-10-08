@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    
+    Goal moving Error 😞
+
+{% endblock %}
+
+{% block content %}
+<div class ='alert alert-danger' role='alert'>
+    <h3> Goal Creation Error 🥺</h3>
+    
+    <p> You account is not authorised to perform this action</p>
+   
+    <p> Kindly review the <b>Terms and conditions</b> stipulated by <b>Linuxjobber</b></p>
+    <hr>
+    <p> Thank you for your time</p>
+  
+    <p>Have a lovely day!!!</p>
+    
+    <h2 class ="wave">Bye :::👋</h2>
+   </div>
+   <hr>
+   <div class ='alert alert-info' role='alert'>
+   <a href = "{% url 'login' %}">Login Here: </a>
+</div>
+{% endblock %}

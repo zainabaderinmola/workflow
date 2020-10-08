@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name='description' content='Professional Website Developer'>
+    <meta name='keywords' content='HTML5, CSS3, Bootstrap, JavaScript, Django'>
+    <meta name='author' content='Akeem Lagundoye'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel='shortcut icon' type='image/png' href="">
+    <title>aicodings inc. Web Developers in Nigeria</title>
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <link href='../css/base.css' rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+        body{font-family: 'Kumbh Sans', sans-serif;}
+        .first{height:100%;}.second{height:100%;}
+        @media(max-width:840px){.first{height:auto;width:100%; display:inline-block;}}
+        @media(min-width:850px){.first{height:610px;width:100%;display:flex;}}
+        .select {display:flex;flex-direction: column;position:relative;width:100%;height:40px;}
+.option {padding:0 30px 0 10px;min-height:40px;display:flex;align-items:center;background:#333;border-top:#222 solid 1px;position:absolute;top:0;
+  width: 100%;
+  pointer-events:none;
+  order:2;
+  z-index:1;
+  transition:background .4s ease-in-out;
+  box-sizing:border-box;
+  overflow:hidden;
+  white-space:nowrap;
+  color:white;
+  
+}
+
+.option:hover {
+  background:rgb(27, 27, 27);
+}
+
+.select:focus .option {
+  position:relative;
+  pointer-events:all;
+}
+
+.select input {
+  opacity:1;
+  position:absolute;
+  left:-99999px;
+}
+
+.select input:checked + label {
+  order: 1;
+  z-index:2;
+  color:black;
+  background:rgb(255, 255, 255);
+  border-top:none;
+  position:relative;
+}
+
+.select input:checked + label:after {
+  content:'';
+  width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid white;
+  position:absolute;
+  right:14px;
+  top:calc(50% - 2.5px);
+  pointer-events:none;
+  z-index:3;
+}
+
+.select input:checked + label:before {
+  position:absolute;
+  right:0;
+  height: 40px;
+  width: 40px;
+  content: '';
+  background:rgb(42, 45, 236);
+}
+label{margin:0; padding:0;float:left;font-size:13px;font-weight:600;}
+input[type=text],input[type=email],input[type=password]{font-size:13px;}
+    </style>
+</head>
+
+<body style="background-color:rgb(10, 1, 36);">
+
+    <main>
+        <div class='container-fluid'>
+            <div class='row justify-content-center' style='min-height:100%;background-color:rgb(3, 6, 20);'>
+                <div class='col-lg-4 my-auto pl-2 col-md-12 d-inline first' style='width:100%;background-color:rgb(255, 255, 255);background-size: cover; padding:0;'>
+                    <div class='text-inner' style='width:220px;height:auto;margin:30px 1px 20px 0;'><a href="../index.html"><h5 style='text-decoration:none;display:inline-block;background-color:rgb(253, 253, 255);color:black;font-size:16px;text-align: left; font-weight:400; padding: 4px;box-shadow:0 10px 6px -6px #777;'><i class="fas fa-robot"></i>  <strong>Brains</strong><h style='opacity: 0.95;'></style>media</h></h5></a></div>
+                    <div class="row">
+                        <div class="col-9 py-4">
+                          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="font:bold 10px Kumbh Sans, sans-serif;">
+                            <a class="nav-link py-3 disabled" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                              aria-controls="v-pills-home" aria-selected="true"><i class='fas fa-check-circle fa-2x mr-3'style='color:rgb(20,90,250);font-size:20px;'></i><h style='opacity:0.3;'>COMPANY TYPE</h></a>
+                            <a class="nav-link py-3 active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                              aria-controls="v-pills-profile" aria-selected="true"><h style='padding:6px 8px;font-size:10px;width:25px;height:25px;border-radius:50%;border:1.5px solid ;margin-right:10px;'>2</h> CATERGORY</a>
+                            <a class="nav-link py-3" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                              aria-controls="v-pills-messages" aria-selected="false"><h style='padding:6px 8px;font-size:10px;width:25px;height:25px;border-radius:50%;border:1.5px solid ;margin-right:10px;'>3</h> BUSINESS DETAILS</a>
+                            <a class="nav-link py-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                              aria-controls="v-pills-settings" aria-selected="false"><h style='padding:6px 8px;font-size:10px;width:25px;height:25px;border-radius:50%;border:1.5px solid ;margin-right:10px;'>4</h> DIRECTORS</a>
+                            <a class="nav-link py-3" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                              aria-controls="v-pills-settings" aria-selected="false"><h style='padding:6px 8px;font-size:10px;width:25px;height:25px;border-radius:50%;border:1.5px solid ;margin-right:10px;'>5</h> PERSONAL DETAILS</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-lg-8 col-md-12 d-inline second p-3' style='width:100%;min-height:610px;background:rgb(245, 245, 245);background-size: cover;background-repeat: no-repeat;background-position: center;margin:0;'>
+                    <div class='text-inner' style='width:220px;height:auto; float:right;'><h5 style='color:rgb(10, 10, 10);font-size:13px;text-align:right; font-weight:300; padding: 4px;'>Having troubles? <a href='#'style='opacity:1;color:rgb(24, 21, 226);font-weight:900;'>Get Help</a></div>
+                    <div class="col-lg-10 text-justify mt-5">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            </div>
+                            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class='text-inner' style='width:100%;height:auto;padding: 2px 10px;margin-top:12%;text-align:left;'><p style='color:rgb(8, 8, 8); opacity:0.7;font-size:20px;font-weight:800;line-height:26px;'>Choose the category</p></div>
+                                <div class='text-inner' style='width:90%;padding: 2px 10px;'><p style='color:rgb(0, 0, 0); font-size:13px;opacity: 0.88;text-align:left;'>Select the category of industry to which your company belongs to.</p></div> 
+                                <div class="select" tabindex="1">
+                                    <input class="selectopt" name="test" type="radio" id="opt" checked>
+                                    <label for="opt" class="option">Select your choice <i class='fas fa-cogs fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt1">
+                                    <label for="opt1" class="option">Aerospace <i class='fas fa-plane fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt2">
+                                    <label for="opt2" class="option">Transport <i class='fas fa-truck-moving fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt3">
+                                    <label for="opt3" class="option">Telecomms <i class='fas fa-satellite-dish fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt4">
+                                    <label for="opt4" class="option">Computer <i class='fas fa-laptop fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt6">
+                                    <label for="opt6" class="option">Agriculture  <i class='fas fa-tractor fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt7">
+                                    <label for="opt7" class="option">Construction <i class='fas fa-hard-hat fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt8">
+                                    <label for="opt8" class="option">Education <i class='fas fa-user-graduate fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt9">
+                                    <label for="opt9" class="option">Pharmaceutical <i class='fas fa-file-prescription fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt11">
+                                    <label for="opt11" class="option">Food <i class='fas fa-utensils fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt12">
+                                    <label for="opt12" class="option">Health care <i class='fas fa-hospital-symbol fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt13">
+                                    <label for="opt13" class="option">Hospitality <i class='fas fa-hotel fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt14">
+                                    <label for="opt14" class="option">Entertainment <i class='fas fa-microphone-alt fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt15">
+                                    <label for="opt15" class="option">News media <i class='fas fa-newspaper fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt16">
+                                    <label for="opt16" class="option">Energy <i class='fas fa-broadcast-tower fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt17">
+                                    <label for="opt17" class="option">Manufacturing <i class='fas fa-industry fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt19">
+                                    <label for="opt19" class="option">Mining <i class='fas fa-coins fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt20">
+                                    <label for="opt20" class="option">Worldwide web <i class='fas fa-blog fa-2x' style='right:50px;position:absolute;'></i></label>
+                                    <input class="selectopt" name="test" type="radio" id="opt21">
+                                    <label for="opt21" class="option">Electronics <i class='fas fa-tv fa-2x' style='right:50px;position:absolute;'></i></label>
+                                </div>
+                                <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:10px;'> This is relative to your specialization.</small></div>
+                                <div class='row'>
+                                    <a href=""><div class='nav' style='background-color:rgb(18, 21, 219);color:white;font-size:12px;padding:6px 15px;position:absolute;bottom:-280px;left:30px;'><i class='fas fa-angle-double-left mr-2'></i> PREV</div></a>
+                                    <a href=""><div class='nav' style='background-color:rgb(18, 21, 219);color:white;font-size:12px;padding:6px 15px;position:absolute;bottom:-280px;right:30px;'>NEXT <i class='fas fa-angle-double-right ml-2'></i></div></a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                <div class='text-inner' style='width:100%;height:auto;padding: 2px 10px;margin-top:12%;text-align:left;'><p style='color:rgb(8, 8, 8); opacity:0.7;font-size:20px;font-weight:800;line-height:26px;'>Business details</p></div>
+                                <div class='text-inner' style='width:90%;padding: 2px 10px;'><p style='color:rgb(0, 0, 0); font-size:13px;opacity: 0.88;text-align:left;'>Information about your business corporations</p></div> 
+                                <form class="text-center" action="#!">
+                                    <div class="form-row mb-2">
+                                        <div class="col-8">
+                                            <label style='margin:0 0 4px 4px;'>Company name</label>
+                                            <input type="text" id="" class="form-control mt-2 mb-2 p-3">
+                                        </div>
+                                        <div class="col-4">
+                                            <label style='margin:0 0 4px 4px;'>Inc</label>
+                                            <input type="text" id="" class="form-control mt-2 mb-2 p-3">
+                                        </div>
+                                    </div>
+                                    <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:6px;font-size:12px;'> Inc, Incorporated, Corp or Corporation are mandatory for business names.</small></div>
+                                    <label style='margin:40px 0 4px 4px;'>Business description</label>
+                                    <input type="textarea" id="" class="form-control mt-2 mb-2 p-5">
+                                    <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;text-align:left;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:6px;font-size:12px;'> A short decription of what your company stands for.</small></div>
+                                </form>
+                                <div class='row'>
+                                    <a href=""><div class='nav' style='background-color:rgb(18, 21, 219);color:white;font-size:12px;padding:6px 15px;position:absolute;bottom:-120px;left:30px;'><i class='fas fa-angle-double-left mr-2'></i> PREV</div></a>
+                                    <a href=""><div class='nav' style='background-color:rgb(18, 21, 219);color:white;font-size:12px;padding:6px 15px;position:absolute;bottom:-120px;right:30px;'>NEXT <i class='fas fa-angle-double-right ml-2'></i></div></a>
+                                </div>
+                            </div>
+                                
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                <div class='text-inner' style='width:100%;height:auto;padding: 2px 10px;margin-top:12%;text-align:left;'><p style='color:rgb(8, 8, 8); opacity:0.7;font-size:20px;font-weight:800;line-height:26px;'>Board of Directors</p></div>
+                                <div class='text-inner' style='width:90%;padding: 2px 10px;'><p style='color:rgb(0, 0, 0); font-size:13px;opacity: 0.88;text-align:left;'>Details of your board of directors, inclusively name and personal details.</p></div> 
+                                <form class="text-center" action="#!">
+                                    <div class="form-row my-4">
+                                        <div class="col">
+                                            <label style='margin-bottom:4px;'>First name</label>
+                                            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="">
+                                            <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:6px;font-size:12px;'> Only alphabets are allowed</small></div>
+                                        </div>
+                                        <div class="col">
+                                            <label style='margin-bottom:4px;'>Last name</label>
+                                            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="">
+                                            <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:6px;font-size:12px;'> Only alphabets are allowed</small></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row mb-2">
+                                        <div class="col">
+                                            <label style='margin-bottom:4px;'>email</label>
+                                            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="">
+                                            <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:6px;font-size:12px;'> @ should be inclusive</small></div>
+                                        </div>
+                                        <div class="col">
+                                            <label style='margin-bottom:4px;'>password</label>
+                                            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="">
+                                            <div class='note mt-2' style="background-color:rgb(236, 236, 255);border-radius:3px;border:1px solid rgb(198, 198, 255);padding:5px;color:rgb(72, 72, 255);"><i class='far fa-clipboard'></i><small style='color:black;opacity:0.7;font-weight:500; margin-left:6px;font-size:12px;'> Minimum of 8 letters.</small></div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class='row'>
+                                    <a href=""><div class='nav' style='background-color:rgb(18, 21, 219);color:white;font-size:12px;padding:6px 15px;position:absolute;bottom:-120px;left:30px;'><i class='fas fa-angle-double-left mr-2'></i> PREV</div></a>
+                                    <a href=""><div class='nav' style='background-color:rgb(18, 21, 219);color:white;font-size:12px;padding:6px 15px;position:absolute;bottom:-120px;right:30px;'>NEXT <i class='fas fa-angle-double-right ml-2'></i></div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </body>
+    </html>

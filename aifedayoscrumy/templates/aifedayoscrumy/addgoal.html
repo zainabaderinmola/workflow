@@ -1,0 +1,30 @@
+{% extends  'base.html' %}
+
+{% block title %}Add Goal Page {% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class ='alert alert-primary' role='alert'>
+<h3>Hi {{ user.username }}!</h3>
+</div>
+<h5>Create A New Goal</h5>
+<hr>
+<div class = 'container'>
+  <form method = 'post'>{% csrf_token %}
+    
+     
+        {{ form.as_p }}
+    
+    
+     <div class="form-group">
+       
+       <input type= 'submit' class = 'btn btn-info btn-lg'></button>
+     </div>
+
+</form>
+</div>
+{% else %}
+<p>You are not logged in</p>
+<a href = "{% url 'login' %}">Login</a>
+{% endif %}
+
+{% endblock %}

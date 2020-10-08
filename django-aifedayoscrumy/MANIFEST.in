@@ -1,0 +1,4 @@
+include LICENCE
+include README.rst
+recursive-incude aifedayoscrumy/static *
+recursive-include aifedayoscrumy/templates *

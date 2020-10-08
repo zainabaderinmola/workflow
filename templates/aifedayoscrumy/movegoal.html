@@ -1,0 +1,12 @@
+{% extends  'base.html' %}
+
+{% block title %}Move Goal Page {% endblock %}
+{% block content %}
+<h2>Move The  Goal</h2>
+
+<form method = 'POST' class = 'post-form'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type = 'submit' value = 'Move Goal'>
+</form>
+{% endblock %}

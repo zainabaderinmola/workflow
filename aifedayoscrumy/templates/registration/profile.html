@@ -1,0 +1,7 @@
+{%block body %}
+<h2>Hello, {{ user.username }}</h2>
+<ul>
+    <li>Currently logged in as : {{ user.username }}</li>
+    <li><a href = "{% url 'logout' %}">Logout</a></li>
+</ul>
+{% endblock %}

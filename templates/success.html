@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    
+    Success! 😊
+
+{% endblock %}
+
+{% block content %}
+<div class ='alert alert-primary' role='alert'>
+    <h1>Success! 😊</h1>
+    
+    <p> You account was successfully created</p>
+	<p> You are now a <b>Developer</b> by default at <b>Linuxjobber</b>
+	<p> Kindly review the <b>Terms and conditions</b> stipulated by <b>Linuxjobber</b></p>   
+    <hr>
+    <p>Have a lovely day!!!</p>
+    
+    <h1 class ="wave">👋</h1>
+   </div>
+   <hr>
+   <div class ='alert alert-info' role='alert'>
+   <a href = "{% url 'login' %}">Login Here: </a>
+</div>
+{% endblock %}
